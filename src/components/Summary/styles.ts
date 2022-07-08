@@ -63,6 +63,7 @@ export const Container = styled.div`
             .dBlock {
                 display: none;
             }
+            
 
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                 h4 {

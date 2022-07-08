@@ -37,8 +37,9 @@ export function Summary() {
                         <div className='divCharts dBlock'>
                             <img src={profileImg} alt="profile" />
                         </div>
-                        <h4>
-                            Olá, Gilbert! Seja bem vindo ao Dashboard
+                        
+                        <h4>                            
+                             Olá, Gilbert! Seja bem vindo ao Dashboard
                         </h4>
                     </header>
                     <span className='spanContainer'>
