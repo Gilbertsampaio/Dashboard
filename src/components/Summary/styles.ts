@@ -52,12 +52,56 @@ export const Container = styled.div`
                 margin-left: -.5rem;
                 color: var(--green);
             }
+
+            img {
+                width: auto;
+                height: 50px;
+                border-radius: 50%;
+                margin-top: 0.5rem;
+            }
+
+            .dBlock {
+                display: none;
+            }
+
+            @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                h4 {
+                    text-align: center;
+                }
+
+                .dBlock {
+                    display: block;
+                }
+            }
+
+            @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+                h4 {
+                    text-align: center;
+                }
+
+                .dBlock {
+                    display: block;
+                }
+            }
+            
         }
 
         .spanContainer {
             display: grid;
             grid-template-columns: 0.7fr 2fr;
             gap: 2rem;
+        }
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            .spanContainer {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+            .spanContainer {
+                display: block;
+            }
         }
 
         span {
@@ -106,6 +150,22 @@ export const Container = styled.div`
                         position: absolute;
                         right: 0;
                     }
+                }
+            }
+
+            .dNone {
+                display: block;
+            }
+
+            @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                .dNone {
+                    display: none;
+                }
+            }
+
+            @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+                .dNone {
+                    display: none;
                 }
             }
 
