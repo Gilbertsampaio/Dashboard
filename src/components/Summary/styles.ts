@@ -13,9 +13,9 @@ export const Container = styled.div`
     
     div.divContainerSummary {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        margin-top: -3rem;
+        margin-top: -3rem;        
     }
 
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -54,18 +54,39 @@ export const Container = styled.div`
             }
         }
 
-        span {
+        .spanContainer {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 0.7fr 2fr;
             gap: 2rem;
+        }
+
+        span {
+
+            &:not(.spanInfo, .spanContainer) {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 2rem;
+            }
 
             .divBox {
-                padding-top: 1rem;
+                padding-top: 1.3rem;
             }
 
             div:not(.divBox, .divCharts) {
                 font-size: .7rem;
                 margin-bottom: 1rem;
+
+                &.profileInfo {
+
+                    position: relative;
+                    font-size: .8rem;
+
+                    span {
+                        position: absolute;
+                        right: 0;
+                    }
+
+                }
 
                 &.lead {
                     border-bottom: 4px solid #ffcc00;
@@ -90,10 +111,18 @@ export const Container = styled.div`
 
             .divCharts {
                 margin-top: -1rem;
+                text-align: center;
 
                 div {
                     padding-top: .5rem;
                     margin-bottom: 0rem;
+                }
+
+                img {
+                    width: auto;
+                    height: 100px;
+                    border-radius: 50%;
+                    margin-top: 1.8rem;
                 }
             }
         }

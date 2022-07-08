@@ -3,21 +3,28 @@ import { api } from '../services/api';
 
 interface Transacao {
     id: number,
-    title: string,
-    amount: number,
-    type: string,
-    category: string;
-    createdAt: string;
+    user: string,
+    atendimento: number,
+    negociacao: number,
+    naoSeAplica: number,
+    perdidos: number,
+    agendados: number,
+    aproveitamento: number,
+    comparacao: number,
+    ganhos: number,
+    desempenho: number
 }
-
-//type TransacaoInput = Omit<Transacao, 'id' | 'createdAt'>;
-//type TransacaoInput = Pick<Transacao, 'title' | 'amount' | 'type'| 'category'>;
-
 interface TransacaoInput {
-    title: string,
-    amount: number,
-    type: string,
-    category: string;
+    user: string,
+    atendimento: number,
+    negociacao: number,
+    naoSeAplica: number,
+    perdidos: number,
+    agendados: number,
+    aproveitamento: number,
+    comparacao: number,
+    ganhos: number,
+    desempenho: number
 }
 
 interface TransactionProviderProps {

@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         --red: #e52e4d;
         --green: #33cc95;
         --blue: #0066ff;
-        --cinza: #888;
+        --cinza: #444;
         --black: #333;
         --blue-light: #6933ff;
         --text-title: #363f5f;
@@ -46,13 +46,37 @@ export const GlobalStyle = createGlobalStyle`
         background: var(--background);
         -webkit-font-smoothing: antialiased;
     }
-    body, input, textarea, button {
+    body, input, select, textarea, button {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #e8e1e1;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-body);
+    }
+
     h1, h2, h3, h4, h5, h6, strong {
         font-weight: 600;
+    }
+
+    .center {
+        text-align: center;
     }
 
     button {
@@ -99,5 +123,13 @@ export const GlobalStyle = createGlobalStyle`
         &:hover {
             filter: brightness(0.8);
         }
+    }
+
+    .success {
+        color: var(--green);
+    }
+
+    .danger {
+        color: var(--red);
     }
 `

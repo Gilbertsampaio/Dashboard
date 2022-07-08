@@ -1,5 +1,6 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { FiChevronsRight } from 'react-icons/fi'
+import profileImg from '../../assets/profile.jpg';
 
 import { Container } from "./styles";
 import 'react-circular-progressbar/dist/styles.css';
@@ -33,6 +34,32 @@ export function Summary() {
             <div className="divContainerSummary">
                 <div className='quadros'>
                     <header>
+                        <h4>
+                            Olá, Gilbert! Seja bem vindo ao Dashboard
+                        </h4>
+                    </header>
+                    <span className='spanContainer'>
+                        <div className='divCharts'>
+                            <img src={profileImg} alt="profile" />
+                        </div>
+                        <div className='divBox pt-1'>
+                            <div className='profileInfo'>
+                                <b>E-mail:</b>
+                                <span className='spanInfo'>sampaiogilbert@gmail.com</span>
+                            </div>
+                            <div className='profileInfo'>
+                                <b>Telefone:</b>
+                                <span className='spanInfo'>(48)99911-3040</span>
+                            </div>
+                            <div className='profileInfo'>
+                                <b>Último acesso:</b>
+                                <span className='spanInfo'>08/07/2022 14:35h</span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div className='quadros'>
+                    <header>
                         <p>
                             <FiChevronsRight />
                             Agendamento (ABRIL)
@@ -51,7 +78,7 @@ export function Summary() {
                         </div>
                         <div className='divCharts'>
                             <div>Seu desempenho</div>
-                            <div style={{ width: 100 }}>
+                            <div className='center' style={{ width: 100, display: 'inline-block' }}>
                                 <CircularProgressbar
                                     value={percentage}
                                     text={`${percentage}%`}
@@ -81,7 +108,7 @@ export function Summary() {
                         </div>
                         <div className='divCharts'>
                             <div>Seu desempenho</div>
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, display: 'inline-block' }}>
                                 <CircularProgressbar
                                     value={percentage2}
                                     text={`${percentage2}%`}
@@ -111,7 +138,7 @@ export function Summary() {
                         </div>
                         <div className='divCharts'>
                             <div>Seu desempenho</div>
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, display: 'inline-block' }}>
                                 <CircularProgressbar
                                     value={percentage3}
                                     text={`${percentage3}%`}

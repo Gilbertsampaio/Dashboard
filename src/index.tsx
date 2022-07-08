@@ -15,27 +15,42 @@ createServer({
       transacaos: [
         {
           id: 1,
-          title: 'Registro nº 1',
-          type: 'colocada',
-          category: 'Dev',
-          amount: 6000,
-          createdAt: new Date('2021-02-12 09:00:00')
+          user: 'Gilbert',
+          atendimento: 198,
+          negociacao: 180,
+          naoSeAplica: 39,
+          perdidos: 11,
+          agendados: 67,
+          aproveitamento: 22,
+          comparacao: 59,
+          ganhos: 39,
+          desempenho: 75
         },
         {
           id: 2,
-          title: 'Registro nº 2',
-          type: 'retirada',
-          category: 'Dev',
-          amount: 1100,
-          createdAt: new Date('2021-02-14 11:00:00')
+          user: 'Marcio',
+          atendimento: 235,
+          negociacao: 114,
+          naoSeAplica: 89,
+          perdidos: 161,
+          agendados: 687,
+          aproveitamento: 242,
+          comparacao: 19,
+          ganhos: 37,
+          desempenho: 71
         },
         {
           id: 3,
-          title: 'Registro nº 3',
-          type: 'retirada',
-          category: 'Dev',
-          amount: 8300,
-          createdAt: new Date('2021-02-14 11:00:00')
+          user: 'Sampaio',
+          atendimento: 138,
+          negociacao: 280,
+          naoSeAplica: 32,
+          perdidos: 12,
+          agendados: 27,
+          aproveitamento: 22,
+          comparacao: 53,
+          ganhos: 33,
+          desempenho: 35
         }
       ]
     })
@@ -60,11 +75,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-/*const container = document.getElementById('root');
-const root = createRoot(container!); // createRoot(container!) if you use TypeScript
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);*/
